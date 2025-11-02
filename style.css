@@ -9,8 +9,10 @@ body {
 
 header {
     background-color: #292929;
+    color: #ffff;
     padding: 4px;
-    text-align: left
+    text-align: left;
+    text-decoration: none;
 }
 
 
@@ -25,20 +27,32 @@ a {
     margin: 0;
     padding: 4px;
     font-size: large;
+    text-decoration: none;
     
 }
+
+a:link {
+    color: rgb(199, 196, 196);
+}
+
+a:active {
+    text-decoration: underline;
+    text-decoration-color: whitesmoke
+}
+
 
 main {
     padding: 20px;
 }
 
 article {
-    background-color: #fff;
+    background-color: #303030;
+    color: #ffff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: left;
     margin: auto;
-    max-width: 600px;
+    max-width: 800px;
 ;
 }
 
