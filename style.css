@@ -1,9 +1,9 @@
-
 body {
     font-family: sans-serif;
     background-color: #303030;
     color: #333;
     margin: 0;
+    justify-content: center;
     padding: 0;
 }
 
@@ -19,20 +19,25 @@ header {
 h1 {
     margin: 0;
     padding: 6px;
-    font-size: large;
+    font-size: xx-large;
     display:inline-block;
 }
 
 a {
     margin: 0;
     padding: 4px;
-    font-size: large;
+    font-size: x-large;
     text-decoration: none;
     
 }
 
 a:link {
     color: rgb(199, 196, 196);
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: whitesmoke
 }
 
 a:active {
@@ -44,10 +49,13 @@ a:visited {
   color: white;
 }
 
-
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 article {
     background-color: #303030;
@@ -60,7 +68,7 @@ article {
 ;
 }
 
-footer {
+.site-footer {
     background-color: #303030;
     color: #ffff;
     padding: 10px;
@@ -69,3 +77,117 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+
+ /* Makes the card lift up slightly on hover */
+    .post-card-link:hover .post-card { 
+      transform: translateY(-5px);
+    }
+
+    /* The image wrapper */
+    .entry-cover {
+      margin: 0; /* Resets default figure margins */
+      border-bottom: 1px solid #444;
+    }
+
+    .entry-cover img {
+      width: 100%; 
+      height: auto; 
+      display: block; 
+    }
+
+    /* The post title header */
+    .entry-header {
+      padding: 16px 16px 8px;
+      /* z-index ensures this is "above" the overlay link */
+      position: relative;
+      z-index: 2;
+    }
+
+    .entry-header h2 {
+      font-size: 1.5rem; /* 24px */
+      margin: 0;
+      color: #ffffff;
+    }
+    
+    /* The post excerpt content */
+    .entry-content {
+      padding: 0 16px 8px;
+      font-size: 0.9rem; /* 14.4px */
+      color: #cccccc; 
+      line-height: 0.4; 
+      /* z-index ensures this is "above" the overlay link */
+      position: relative;
+      z-index: 2;
+      text-decoration: none;
+    }
+
+    .entry-content p {
+      margin-bottom: 16px;
+    }
+    
+    /* The post date footer */
+    .entry-footer {
+      padding: 0 16px 16px;
+      
+      font-size: 0.8rem; /* 12.8px */
+      color: #bbbbbb; 
+      /* z-index ensures this is "above" the overlay link */
+      position: relative;
+      z-index: 2;
+      background-color: transparent;
+      text-decoration: none;
+    
+
+    }
+    
+    .entry-footer p {
+      margin: 0;
+      text-align: left;
+      text-decoration: none;
+    }
+
+    /* * This is the "stretched link" overlay.
+     * It sits *inside* the article and covers the whole thing,
+     * but has a lower z-index than the content.
+    */
+    .entry-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1; /* Sits behind content (z-index: 2) */
+      text-decoration: none;
+      /* For accessibility, hide it from screen readers (the title is already read) */
+      text-indent: -9999px;
+      align-items: center;
+    }
+
+    .post-card-link {
+        
+
+    text-decoration: none; /* Removes underline from link */
+    color: inherit; /* Makes text inside inherit color */
+    display: block; /* Makes the link a block element */
+}
+.post-card { 
+    position: relative;
+    background-color: #2a2a2a; 
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 20px; 
+    overflow: hidden; 
+    max-width: 800px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    margin: 30px auto;
+    background-attachment: scroll;
+    align-items: center;
+    justify-content: center;
+    
+
+ }
